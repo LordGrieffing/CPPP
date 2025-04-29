@@ -1,4 +1,6 @@
 #include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
 #include <string>
 #include <optional>
 
@@ -6,10 +8,10 @@ int main(){
 
 
 
-    sf::Window window(sf::VideoMode(800, 600), "My Window", sf::Style::None);
-    sf::WindowHandle handle = window.getSystemHandle();
+    //sf::Window window(sf::VideoMode(800, 600), "My Window", sf::Style::None);
+    sf::Window window(sf::VideoMode(800, 600), "My Window");
     
-    window.setPosition({10, 50});
+    //window.setPosition({10, 50});
 
     while (window.isOpen()){
 
@@ -19,6 +21,7 @@ int main(){
                 window.close();
             }
         }
+        //window.display();
     }
     return 0;
 }
